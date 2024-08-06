@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base /react-gif-expert/ && rm -rf docs && mv dist docs",
+    "build": "vite build",
+    "deploy": "yarn build && git add docs -f && git commit -m 'Deploy to GitHub Pages' && git push origin main",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
